@@ -1,3 +1,73 @@
 body {
   background: papayawhip;
 }
+
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: warp;
+
+  .a {
+    background-color: red;
+  }
+  .b{
+    background-color: green;
+  }
+  .c {
+    background-color: yellow ;
+  }
+  .d {
+   background-color: blue;
+  }
+  .e {
+    background-color: purple;
+  }
+ .f{}
+    background-color: purple;
+}
+.expanded{
+  flex-basis: 100%;
+  height: 30vh;
+  align-items: flex-start;
+}
+.triplet{
+  height:25vh;
+  align-items:flex-end;
+  flex-grow: 1; 
+}
+
+.a{
+  height: 40vh;
+  margin-bottom: .5rem;
+}
+.container-one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+
+  flex-grow: 2;
+}
+
+.container-two{
+  flex-grow:1;
+  padding-right: 5px;
+}
+
+.child{
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.main-container {
+ display: flex;
+ flex-direction: row;
+ gap: .5rem;
+}
+.single {
+  height: 98.9%;
+  width: 100%;
+}
+
