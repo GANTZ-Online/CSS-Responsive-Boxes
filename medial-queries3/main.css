@@ -1,48 +1,69 @@
+/* use vh and vw instead of px, works like a % but better */
+
+
 body {
   background: peachpuff;
 }
 
+*{
+  border: 2px solid black;
+}
+
 .wrapper{
   border: 1px black;
+  display: flex;  /* used for multiple content boxes */
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+header{
+  width: 100%;
+  height: 15vh;
+}
+
+footer {
+  flex-grow: 4;
 }
 
 .a{
   background-color: rgb(199, 104, 104);
-  border:1px solid black;
-  height: 25vh;
+  width: 100%;
   
 }
 
 .triplets-container{
   background-color: rgb(120, 230, 230);
-  border:1px solid black;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: .5rem;
-  height: 25vh;
-  
-
+  flex-direction: column;
+  min-height: 85vh;
+  width: 100%;
 }
 
-.triplets-container > div{
-  border: 1px solid black;
-  height: 50px;
-  width: 50px;
+.cards{
+  display: flex;
+  flex-grow: 2;
+  flex-wrap:wrap;
+  justify-content: space-evenly;
+  width: 100%
 }
 
 .h{
   background-color: rgb(166, 238, 166);
-  border:1px solid black;
-  height: 25vh;
-  flex-grow: 4; 
+  flex-grow: 1; 
 
-  
+
 }
 
+.cards div{
+  height: 80;
+  margin: 1em;
+  width: 20%; 
+}
+
+
 @media (min-width: 600px) {
-  .wrapper {
+  .triplets-container {
     flex-direction: row;
   }
   aside {
@@ -54,8 +75,16 @@ body {
   aside > div {
     height: 10em;
   }
-
-  main {
-    flex: 2;
+  .cards {
+    width: 100%
+    flex: 4;
+    align-items: center;
+    margin: 0em;
+  }
+  footer{
+    min-height: 88vh;
+  }
+  header {
+    max-height: 12vh;
   }
 }
