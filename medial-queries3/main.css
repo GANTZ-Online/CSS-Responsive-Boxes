@@ -1,3 +1,49 @@
 body {
   background: peachpuff;
 }
+.cards {
+  /* height: 60px; */
+  width: 60px;
+  border: 1px solid black;
+  width: 67vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+.card{
+  height: 20vw;
+  width: 30%;
+  border: 1px solid black;
+}
+.a{
+  max-width: auto;
+  border: 1px solid black;
+  height: 30vh;
+  
+}
+.h{
+  max-width: auto;
+  border: 1px solid black;
+  width: 33vw; 
+}
+
+.container-three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* flex-direction: column; */
+}
+
+@media screen and (max-width: 600px) {
+  .container-three {
+    flex-direction: column;
+  }
+  .h{
+  
+    width: 100%; 
+  }
+  .cards {
+    width: 100%;
+  }
+}
